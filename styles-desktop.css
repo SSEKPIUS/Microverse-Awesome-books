@@ -18,6 +18,20 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
-  font-size: 0.987em;
+  font-size: 1.2em;
   overflow-x: hidden !important;
+}
+
+.container {
+    margin: 0 10%;
+}
+
+/* top nav */
+
+.top-nav {
+    display: flex;
+}
+
+.top-nav ul {
+    list-style: none;
 }
