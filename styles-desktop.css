@@ -1,1 +1,23 @@
 /* mobile styles */
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@400;500&family=Poppins&family=Roboto:wght@700&display=swap');
+/* stylelint-disable  no-descending-specificity */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'sora', serif; /* stylelint-disable-line */
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0 3em;
+  font-size: 0.987em;
+  overflow-x: hidden !important;
+}
