@@ -35,3 +35,101 @@ body {
 .top-nav ul {
     list-style: none;
 }
+
+
+/* ***************** */
+  /* new book */
+  #new {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #new h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: blueviolet;
+  }
+  /* form in new book */
+  #book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-size: 30px;
+  }
+  .in-put {
+    background: #fff;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    width: 327px;
+    height: 48px;
+    margin-top: 20px;
+    margin-left: 8px;
+    padding-left: 8px;
+  }
+  .form-book {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn button {
+    background-color: blue;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+
+  /* *********************** */
+  /* contact us section */
+  #contact {
+    text-align: center;
+    background-color: #d3d3d3;
+    padding: 30px 0;
+    margin: 30px 0;
+    border-radius: 30px;
+    font-size: 30px;
+  }
+#contact h2{
+  font-size: 40px;
+  font-weight: 700;
+  color: blueviolet;
+}
+#contact p {
+  width: auto;
+}
+#contact ul a{
+  text-decoration: none;
+  color: blueviolet;
+}
+#contact li {
+  list-style: none;
+  margin: 2% 3%;
+}
+
+/* ******************************** */
+  /* footer section */
+  footer {
+    background-color:blueviolet;
+    color: #fff;
+    font-size: 30px;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+  }
+  .foot {
+    margin: 10px 0;
+    padding: 15px 0;
+  }
+  .bottom {
+    background-color: black;
+    height: 40px;
+    margin-top: 10px;
+  }
