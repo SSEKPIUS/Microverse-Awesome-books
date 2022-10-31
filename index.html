@@ -38,11 +38,27 @@
             <section id="list">
                 <div>
                     <h2>all awesome books</h2>
+                    <div class="book-list">
+                       
+                    </div>
                 </div>
             </section>
             <section id="new">
                 <div>
-                    <h2>add new book</h2>
+                    <h2>add a new book</h2>
+                    <form id="book-form">
+                        <div class="form-book">
+                            <label for="title">Book Title</label>
+                        <input type="text" id="title" required maxlength="40">
+                        </div>
+                        <div class="form-book">
+                            <label for="author">Book Author</label>
+                        <input type="text" id="author" required maxlength="40">
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Add</button>
+                        </div>
+                    </form>
                 </div>
             </section>
             <section id="contact">
@@ -52,6 +68,9 @@
             </section>
         </main>
         <footer>
+            <div>
+                <span> copyright </span>
+            </div>
             <div>
                 <span>Awesome books</span>
                 <span>@2022</span>
