@@ -15,7 +15,7 @@ html {
 body {
   font-family: 'sora', serif; /* stylelint-disable-line */
   background: #fff;
-  color: #000;
+  color: rgb(51, 50, 50);
   margin: 0;
   padding: 0;
   font-size: 1.2em;
@@ -28,10 +28,60 @@ body {
 
 /* top nav */
 
+.top-nav,
+.top-nav ul {
+  display: flex; 
+  align-items: center;
+  flex: 1;
+}
+
 .top-nav {
-    display: flex;
+  border: 1px solid gray;
+  margin: 20px;
+  padding: 0 20px;
+}
+
+.top-nav h1 {
+  font-size: 2em;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: system-ui;
+  flex-basis: 60%;
 }
 
 .top-nav ul {
-    list-style: none;
+  list-style: none;
+  flex-basis: 40%;
+  justify-content: end;
+}
+
+.top-nav ul li span {
+  font-size: 1.4em;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 0 1em;
+  white-space: nowrap;
+}
+
+.top-nav ul li:last-child span {
+    padding-right: 0;
+}
+
+.top-nav ul li span:hover {
+    color: blue;
+}
+
+.top-nav ul li:not(:last-child) span {
+    border-right: 1px solid black;
+}
+
+.top-date {
+  display: flex;
+  justify-content: end;
+}
+
+.top-date span {
+  font-size: 1em;
+  margin-right: 1em;
+  font-style: italic;
 }
