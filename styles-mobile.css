@@ -45,16 +45,16 @@
 
   .btn {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     width: 50%;
-  } 
-  
+  }
+
   .btn button {
     color: black;
     font-size: 20px;
     padding: 10px;
     border-radius: 10px;
-    margin-right: 20px; 
+    margin-right: 20px;
   }
 
   /* contact us section */
@@ -65,12 +65,11 @@
     border-radius: 30px;
     font-size: 18px;
   }
-  
+
   #contact h2 {
     font-size: 40px;
     font-weight: 700;
   }
-  
 
   #contact p {
     font-size: 18px;
@@ -83,13 +82,13 @@
     text-align: left;
     margin: 2% 10%;
   }
-  
+
   #contact ul a {
     text-decoration: none;
     color: black;
     font-size: 18px;
   }
-  
+
   #contact li {
     margin: 2% 3%;
   }
@@ -101,7 +100,6 @@
     align-items: center;
     text-align: center;
     font-weight: 400;
-   
   }
 
   .foot {
@@ -109,7 +107,6 @@
     border: black solid 2px;
     margin: 1% 1%;
   }
-
 
   .bottom {
     background-color: black;

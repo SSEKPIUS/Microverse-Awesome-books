@@ -160,7 +160,6 @@ body {
 #new h2 {
   font-size: 50px;
   font-weight: 700;
-  /* color: blueviolet; */
 }
 
 #book-form {
@@ -194,16 +193,16 @@ body {
 
 .btn {
   display: flex;
-  justify-content:flex-end;
-  width: 50%;
-} 
+  justify-content: flex-end;
+  width: 25%;
+}
 
 .btn button {
   color: black;
   font-size: 20px;
   padding: 10px;
   border-radius: 10px;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 /* contact us section */
@@ -248,7 +247,6 @@ footer {
   align-items: center;
   text-align: center;
   font-weight: 400;
- 
 }
 
 .foot {
