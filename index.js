@@ -76,7 +76,7 @@ class DomMethods {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  let dmMethods = new DomMethods();
+  const dmMethods = new DomMethods();
   document.getElementById('list-link').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
     document.querySelector('#new-link span').style.color = 'inherit';
