@@ -50,7 +50,6 @@
 
   #new h2 {
     font-size: 40px;
-    color: blueviolet;
   }
 
   /* form in new book */
@@ -83,19 +82,23 @@
     padding-left: 8px;
   }
 
+  .btn {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+  }
+
   .btn button {
-    background-color: blue;
-    color: #fff;
+    color: black;
     font-size: 20px;
     padding: 10px;
     border-radius: 10px;
+    margin-right: 20px;
   }
 
   /* contact us section */
-
   #contact {
     text-align: center;
-    background-color: #d3d3d3;
     padding: 30px 0;
     margin: 30px 0;
     border-radius: 30px;
@@ -105,7 +108,6 @@
   #contact h2 {
     font-size: 40px;
     font-weight: 700;
-    color: blueviolet;
   }
 
   #contact p {
@@ -113,23 +115,26 @@
     width: auto;
   }
 
+  #contact ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 2% 10%;
+  }
+
   #contact ul a {
     text-decoration: none;
-    color: blueviolet;
-    width: 100%;
+    color: black;
     font-size: 18px;
   }
 
   #contact li {
-    list-style: none;
     margin: 2% 3%;
   }
 
   /* footer section */
 
   footer {
-    background-color: blueviolet;
-    color: #fff;
     font-size: 20px;
     align-items: center;
     text-align: center;
@@ -137,8 +142,9 @@
   }
 
   .foot {
-    margin: 10px 0;
-    padding: 15px 0;
+    padding: 10px 0;
+    border: black solid 2px;
+    margin: 1% 1%;
   }
 
   .bottom {

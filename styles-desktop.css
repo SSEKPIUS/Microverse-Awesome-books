@@ -220,19 +220,24 @@ body {
   text-align: center;
 }
 
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 25%;
+}
+
 .btn button {
-  background-color: blue;
-  color: #fff;
-  font-size: 30px;
+  color: black;
+  font-size: 20px;
   padding: 10px;
   border-radius: 10px;
+  margin-right: 20px;
 }
 
 /* contact us section */
 
 #contact {
   text-align: center;
-  background-color: #d3d3d3;
   padding: 30px 0;
   margin: 30px 0;
   border-radius: 30px;
@@ -242,28 +247,31 @@ body {
 #contact h2 {
   font-size: 40px;
   font-weight: 700;
-  color: blueviolet;
 }
 
 #contact p {
   width: auto;
 }
 
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 2% 10%;
+}
+
 #contact ul a {
   text-decoration: none;
-  color: blueviolet;
+  color: black;
 }
 
 #contact li {
-  list-style: none;
   margin: 2% 3%;
 }
 
 /* footer section */
 
 footer {
-  background-color: blueviolet;
-  color: #fff;
   font-size: 30px;
   align-items: center;
   text-align: center;
@@ -271,8 +279,9 @@ footer {
 }
 
 .foot {
-  margin: 10px 0;
-  padding: 15px 0;
+  padding: 10px 0;
+  border: black solid 2px;
+  margin: 1% 1%;
 }
 
 .bottom {
