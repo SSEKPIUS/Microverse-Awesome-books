@@ -85,3 +85,58 @@ body {
   margin-right: 1em;
   font-style: italic;
 }
+
+.book-list ul {
+  border: 1px solid rgba(128, 128, 128, 0.333);
+  padding: 1em;
+  list-style: none;
+  border-radius: 1em;
+}
+
+.book-list ul li {
+  padding: 0.5em 0;
+  display:  flex;
+}
+
+.book-list ul li:nth-child(odd) {
+  background: rgba(128, 128, 128, 0.101);
+}
+
+.book-list ul li span:nth-child(1) {
+  font-size: x-large;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.book-list ul li span:nth-child(1):hover {
+  color: blue;
+}
+
+.book-list ul li span:nth-child(2) {
+  margin-left: auto;
+}
+
+.book-list ul li span {
+  padding: 0 20px;
+}
+
+.book-list ul input[type=button] {
+    background-color: white; /* Green */
+    border-radius: 5px;
+    border: 2px solid #f44336;
+    color: red;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.book-list ul input[type=button]:hover {
+    background-color: red; /* Green */
+    color: white;
+}
+
+
