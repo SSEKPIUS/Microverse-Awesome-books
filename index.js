@@ -1,15 +1,9 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-unused-vars */
-/* eslint-disable radix */
-/* eslint-disable no-console */
-/* eslint-disable func-names */
-/* eslint-disable prefer-arrow-callback */
 class DomMethods {
   constructor() {
     this.books = [];
   }
 
-  toggleView(index) {
+  toggleView = (index) => {
     switch (index) {
       case 0:
         document.getElementById('list').style.display = 'flex';
@@ -35,8 +29,8 @@ class DomMethods {
 
   removeBook(tag) {
     if (Object.keys(this.books).length > 0) {
-      this.books = this.books.filter(function (el) {
-        return el.id !== parseInt(this[0]);
+      this.books = this.books.filter(function get(el) {
+        return el.id !== parseInt(this[0], 36);
       }, tag);
       localStorage.setItem('books', JSON.stringify(this.books));
       window.dispatchEvent(new Event('storage'));
