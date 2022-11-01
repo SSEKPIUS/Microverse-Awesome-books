@@ -1,3 +1,7 @@
+/* eslint-disable radix */
+/* eslint-disable no-console */
+/* eslint-disable func-names */
+/* eslint-disable prefer-arrow-callback */
 function toggleView(index) {
   switch (index) {
     case 0:
@@ -21,23 +25,44 @@ function toggleView(index) {
       document.getElementById('contact').style.display = 'none';
   }
 }
-const books = [];
-function loadBooks() {
+let books = [];
+function removeBook(tag) {
   if (Object.keys(books).length > 0) {
-    const el = document.querySelector('.book-list ul');
-    books.forEach((element) => {
-      const span1 = document.createElement('span');
-      span1.textContent = `${element.book} by ${element.author}`;
-      const input = document.createElement('div');
-      input.type = 'button';
-      input.value = 'Input';
-      const span2 = document.createElement('span');
-      span2.appendChild(input);
-      const li = document.createElement('li');
-      li.appendChild(span1);
-      li.appendChild(span2);
-      el.appendChild(li);
-    });
+    books = books.filter(function (el) {
+      return el.id !== parseInt(this[0]);
+    }, tag);
+    localStorage.setItem('books', JSON.stringify(books));
+    window.dispatchEvent(new Event('storage'));
+  }
+}
+function loadBooks() {
+  const el = document.querySelector('.book-list ul');
+  el.innerHTML = '';
+  if (localStorage.getItem('books')) {
+    const data = JSON.parse(localStorage.getItem('books'));
+    if (Object.keys(data).length > 0) {
+      data.forEach((element) => {
+        const span0 = document.createElement('span');
+        span0.innerText = element.id;
+        const span1 = document.createElement('span');
+        span1.textContent = `${element.book} by ${element.author}`;
+        const input = document.createElement('input');
+        input.type = 'button';
+        input.value = 'Remove';
+        input.addEventListener('click', (e) => {
+          const bookTag = e.target.parentNode.parentNode.querySelector('span:first-child').innerText;
+          removeBook(bookTag);
+        });
+        const span2 = document.createElement('span');
+        span2.appendChild(input);
+        const li = document.createElement('li');
+        li.appendChild(span0);
+        li.appendChild(span1);
+        li.appendChild(span2);
+        el.appendChild(li);
+      });
+    }
+    books = data;
   }
 }
 window.addEventListener('DOMContentLoaded', () => {
@@ -58,6 +83,26 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#list-link span').style.setProperty('color', 'inherit');
     document.querySelector('#new-link span').style.setProperty('color', 'inherit');
     toggleView(2);
+  });
+  document.getElementById('book-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const id = books.length;
+    const book = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    if (book && author) {
+      books.push({ id, book, author });
+      document.getElementById('error').textContent = '';
+      localStorage.setItem('books', JSON.stringify(books));
+      window.dispatchEvent(new Event('storage'));
+      document.getElementById('title').value = '';
+      document.getElementById('author').value = '';
+    } else {
+      document.getElementById('error').textContent = 'Provide all details';
+      document.getElementById('error').style.setProperty('color', 'red');
+    }
+  });
+  window.addEventListener('storage', () => {
+    loadBooks();
   });
   loadBooks();
 });

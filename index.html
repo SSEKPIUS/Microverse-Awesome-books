@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"
             href="font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="styles-desktop.css" class="src">
-        <link rel="stylesheet" href="styles-mobile.css" class="src">
+        <!-- <link rel="stylesheet" href="styles-desktop.css" class="src">
+        <link rel="stylesheet" href="styles-mobile.css" class="src"> -->
         <script src="index.js" defer></script>
         <title>Awesome books</title>
     </head>
@@ -41,22 +41,6 @@
                     <h2>All awesome books</h2>
                     <div class="book-list">
                         <ul>
-                            <li>
-                                <span>Title by author</span>
-                                <span><input type="button" value="Remove"></span>
-                            </li>
-                            <li>
-                                <span>Title by author</span>
-                                <span><input type="button" value="Remove"></span>
-                            </li>
-                            <li>
-                                <span>Title by author</span>
-                                <span><input type="button" value="Remove"></span>
-                            </li>
-                            <li>
-                                <span>Title by author</span>
-                                <span><input type="button" value="Remove"></span>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -66,13 +50,11 @@
                     <h2>Add a new book</h2>
                     <form id="book-form">
                         <div class="form-book">
-                            
                             <input type="text" id="title" required
                                 maxlength="40" name="Title" placeholder="Title of the book" 
                                 size="30" class="in-put"><br>
                         </div>
                         <div class="form-book">
-                            
                             <input type="text" id="author" class="in-put" required
                                 maxlength="40"  name="Author" placeholder="Author of the book" 
                                 size="30" ><br>
@@ -80,6 +62,7 @@
                         <div class="btn">
                             <button type="submit">Add</button>
                         </div>
+                        <span id="error"></span>
                     </form>
                 </div>
             </section>
