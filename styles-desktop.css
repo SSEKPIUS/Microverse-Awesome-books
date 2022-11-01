@@ -32,7 +32,7 @@ body {
 
 .top-nav,
 .top-nav ul {
-  display: flex; 
+  display: flex;
   align-items: center;
   flex: 1;
 }
@@ -66,15 +66,15 @@ body {
 }
 
 .top-nav ul li:last-child span {
-    padding-right: 0;
+  padding-right: 0;
 }
 
 .top-nav ul li span:hover {
-    color: blue;
+  color: blue;
 }
 
 .top-nav ul li:not(:last-child) span {
-    border-right: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .top-date {
@@ -97,7 +97,7 @@ body {
 
 .book-list ul li {
   padding: 0.5em 0;
-  display:  flex;
+  display: flex;
 }
 
 .book-list ul li:nth-child(odd) {
@@ -123,22 +123,22 @@ body {
 }
 
 .book-list ul input[type=button] {
-    background-color: white; /* Green */
-    border-radius: 5px;
-    border: 2px solid #f44336;
-    color: red;
-    padding: 10px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+  background-color: white; /* Green */
+  border-radius: 5px;
+  border: 2px solid #f44336;
+  color: red;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 .book-list ul input[type=button]:hover {
-    background-color: red; /* Green */
-    color: white;
+  background-color: red; /* Green */
+  color: white;
 }
 
 /* new book */
