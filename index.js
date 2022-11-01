@@ -21,7 +21,20 @@ function toggleView(index) {
       document.getElementById('contact').style.display = 'none';
   }
 }
-const books = [];
+
+// books list
+
+
+const inputTitle = document.getElementById('title').value;
+const inputAuthor = document.getElementById('author').value;
+const add = document.querySelector('#add-btn');
+const ul = document.querySelector('.list-books');
+const books = {
+  title: inputTitle,
+  author: inputAuthor
+};
+
+// const books = [];
 function loadBooks() {
   if (Object.keys(books).length > 0) {
     const el = document.querySelector('.book-list ul');
@@ -61,3 +74,34 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   loadBooks();
 });
+
+
+
+// const bookData = [];
+
+// add.addEventListener('click', ()=>{
+//   let existing = JSON.parse(localStorage.getItem('bookData'));
+//   localStorage.setItem('books', JSON.stringify(books));
+//   existing.push(books);
+//   localStorage.setItem('bookData', JSON.stringify(existing));
+//   window.location.reload();
+
+// });
+
+// const info = JSON.parse(localStorage.getItem('bookData'))
+// if(info){
+//   info.forEach((data)=>{
+//     const li = document.createElement('li');
+//     ul.appendChild(li);
+
+//     const span1 = document.createElement('span');
+//     span1.innerHTML= `${data.title} by ${data.author}`
+//     const span2 = document.createElement('span');
+
+//     span2.innerHTML = `<input type ="button" value ="remove"></span>`
+
+//     li.appendChild(span1);
+//     li.appendChild(span2);
+
+//   })
+// };
