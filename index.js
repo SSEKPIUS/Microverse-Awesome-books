@@ -75,19 +75,19 @@ window.addEventListener('DOMContentLoaded', () => {
     e.target.style.color = 'blue';
     document.querySelector('#new-link span').style.color = 'inherit';
     document.querySelector('#contact-link span').style.color = 'inherit';
-    toggleView(0);
+    this.toggleView(0);
   });
   document.getElementById('new-link').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
     document.querySelector('#list-link span').style.color = 'inherit';
     document.querySelector('#contact-link span').style.color = 'inherit';
-    toggleView(1);
+    this.toggleView(1);
   });
   document.getElementById('contact-link').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
     document.querySelector('#list-link span').style.setProperty('color', 'inherit');
     document.querySelector('#new-link span').style.setProperty('color', 'inherit');
-    toggleView(2);
+    this.toggleView(2);
   });
   document.getElementById('book-form').addEventListener('submit', (e) => {
     e.preventDefault();
