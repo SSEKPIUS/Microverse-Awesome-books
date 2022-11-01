@@ -21,6 +21,7 @@ body {
   padding: 0;
   font-size: 1.2em;
   overflow-x: hidden !important;
+  position: relative;
 }
 
 .container {
@@ -50,7 +51,8 @@ body {
   flex-basis: 60%;
 }
 
-.top-nav ul {
+.top-nav ul,
+.top-nav .buttons {
   list-style: none;
   flex-basis: 40%;
   justify-content: end;
@@ -157,7 +159,7 @@ body {
 }
 
 .book-list ul input[type=button] {
-  background-color: white; /* Green */
+  background-color: white;
   border-radius: 5px;
   border: 2px solid #f44336;
   color: red;
@@ -171,7 +173,7 @@ body {
 }
 
 .book-list ul input[type=button]:hover {
-  background-color: red; /* Green */
+  background-color: red;
   color: white;
 }
 

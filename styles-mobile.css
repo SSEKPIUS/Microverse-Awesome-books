@@ -1,5 +1,44 @@
 /* stylelint-disable  no-descending-specificity */
 @media all and (max-width: 768px) {
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* top nav */
+
+  .top-nav {
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    background: black;
+    margin: 0;
+}
+  }
+
+  .top-nav,
+  .top-nav ul {
+    flex-direction: column;
+  }
+
+  .top-nav ul {
+    margin: 0 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .top-nav ul li {
+    margin: 0 20px;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  .top-nav ul li span {
+    border: none !important;
+  }
+
+  /* book list */
+
   /* new book */
 
   #new {
