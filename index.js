@@ -21,6 +21,25 @@ function toggleView(index) {
       document.getElementById('contact').style.display = 'none';
   }
 }
+const books = [];
+function loadBooks() {
+  if (Object.keys(books).length > 0) {
+    const el = document.querySelector('.book-list ul');
+    books.forEach((element) => {
+      const span1 = document.createElement('span');
+      span1.textContent = `${element.book} by ${element.author}`;
+      const input = document.createElement('div');
+      input.type = 'button';
+      input.value = 'Input';
+      const span2 = document.createElement('span');
+      span2.appendChild(input);
+      const li = document.createElement('li');
+      li.appendChild(span1);
+      li.appendChild(span2);
+      el.appendChild(li);
+    });
+  }
+}
 window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('list-link').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
@@ -40,4 +59,5 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#new-link span').style.setProperty('color', 'inherit');
     toggleView(2);
   });
+  loadBooks();
 });
