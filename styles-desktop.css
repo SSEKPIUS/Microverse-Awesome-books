@@ -51,8 +51,7 @@ body {
   flex-basis: 60%;
 }
 
-.top-nav ul,
-.top-nav .buttons {
+.top-nav ul {
   list-style: none;
   flex-basis: 40%;
   justify-content: end;

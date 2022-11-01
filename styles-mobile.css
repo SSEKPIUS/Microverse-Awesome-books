@@ -9,35 +9,45 @@
 
   .top-nav {
     flex-direction: column;
-    position: absolute;
-    height: 100%;
-    background: black;
+    padding: 0.3em;
     margin: 0;
-}
+    background: rgb(200, 197, 197);
   }
 
-  .top-nav,
-  .top-nav ul {
-    flex-direction: column;
+  .top-nav h1 {
+    font-size: 1.5em;
   }
 
   .top-nav ul {
-    margin: 0 0;
+    margin: 0;
     padding: 0;
-    width: 100%;
-  }
-
-  .top-nav ul li {
-    margin: 0 20px;
-    width: 100%;
-    border-bottom: 1px solid black;
   }
 
   .top-nav ul li span {
-    border: none !important;
+    font-size: 1.2em;
+    padding: 0 0.8em;
+  }
+
+  .top-date {
+    margin-top: 1em;
+    justify-content: center;
   }
 
   /* book list */
+
+  #list h2 {
+    font-size: 34px;
+  }
+
+  .book-list ul li {
+    flex-direction: column;
+  }
+
+  .book-list ul input[type=button] {
+    padding: 5px 30px;
+    font-size: 13px;
+    margin: 2px 2px;
+  }
 
   /* new book */
 
