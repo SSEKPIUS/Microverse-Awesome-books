@@ -34,13 +34,17 @@ const books = {
   author: inputAuthor
 };
 
+add.addEventListener('click', ()=> {
+  loadBooks();
+});
+
 // const books = [];
 function loadBooks() {
   if (Object.keys(books).length > 0) {
     const el = document.querySelector('.book-list ul');
     books.forEach((element) => {
       const span1 = document.createElement('span');
-      span1.textContent = `${element.book} by ${element.author}`;
+      span1.textContent = `${element.title} by ${element.author}`;
       const input = document.createElement('div');
       input.type = 'button';
       input.value = 'Input';
