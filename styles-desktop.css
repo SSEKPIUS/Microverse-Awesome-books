@@ -14,10 +14,9 @@ html {
 }
 
 body {
-  font-family: 'sora', serif;
-  /* stylelint-disable-line */
+  font-family: 'sora', serif; /* stylelint-disable-line */
   background: #fff;
-  color: rgb(51, 50, 50);
+  color: rgb(51 50 50 / 89%);
   margin: 0;
   padding: 0;
   font-size: 1.2em;
@@ -88,6 +87,14 @@ body {
   font-style: italic;
 }
 
+/* book list */
+
+#list h2 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
 .book-list ul {
   border: 1px solid rgba(128, 128, 128, 0.333);
   padding: 1em;
@@ -153,7 +160,7 @@ body {
 #new h2 {
   font-size: 50px;
   font-weight: 700;
-  color: blueviolet;
+  /* color: blueviolet; */
 }
 
 #book-form {
