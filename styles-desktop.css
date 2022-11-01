@@ -68,6 +68,10 @@ body {
   padding-right: 0;
 }
 
+#list-link span {
+  color: blue;
+}
+
 .top-nav ul li span:hover {
   color: blue;
 }
@@ -85,6 +89,29 @@ body {
   font-size: 1em;
   margin-right: 1em;
   font-style: italic;
+}
+
+#list {
+  display: flex;
+}
+
+#new,
+#contact {
+  display: none;
+}
+
+#list,
+#contact,
+#new {
+  height: 80%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#list > div,
+#contact > div,
+#new > div {
+  width: 100%;
 }
 
 /* book list */
@@ -150,7 +177,7 @@ body {
 
 /* new book */
 
-#new {
+#new > div {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -160,7 +187,6 @@ body {
 #new h2 {
   font-size: 50px;
   font-weight: 700;
-  /* color: blueviolet; */
 }
 
 #book-form {
