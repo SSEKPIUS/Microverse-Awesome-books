@@ -1,3 +1,4 @@
+// change navigation when links clicked
 const toggleView = (index) => {
   switch (index) {
     case 0:
@@ -21,6 +22,8 @@ const toggleView = (index) => {
       document.getElementById('contact').style.display = 'none';
   }
 };
+
+// CLASS
 
 class DomMethods {
   constructor() {
@@ -112,4 +115,19 @@ window.addEventListener('DOMContentLoaded', () => {
     dmMethods.loadBooks();
   });
   dmMethods.loadBooks();
+
+  // add btn navigate back to list
+  const addbk = document.querySelector('#add-bk');
+  const bkList = document.getElementById('list-link');
+  const newLink = document.querySelector('#new-link span');
+  const contactLink = document.querySelector('#contact-link span');
+
+  addbk.addEventListener('click', () => {
+    if (document.getElementById('title').value !== '' && document.getElementById('author').value !== '') {
+      toggleView(0);
+      bkList.style.color = 'inherit';
+      newLink.style.color = 'inherit';
+      contactLink.style.color = 'inherit';
+    }
+  });
 });
