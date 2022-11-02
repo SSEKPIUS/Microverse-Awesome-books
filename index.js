@@ -1,4 +1,4 @@
-function toggleView(index) {
+const toggleView = (index) => {
   switch (index) {
     case 0:
       document.getElementById('list').style.display = 'flex';
@@ -20,36 +20,14 @@ function toggleView(index) {
       document.getElementById('new').style.display = 'none';
       document.getElementById('contact').style.display = 'none';
   }
-}
+};
 
 class DomMethods {
   constructor() {
     this.books = [];
   }
 
-  // function toggleView(index) {
-  //   switch (index) {
-  //     case 0:
-  //       document.getElementById('list').style.display = 'flex';
-  //       document.getElementById('new').style.display = 'none';
-  //       document.getElementById('contact').style.display = 'none';
-  //       break;
-  //     case 1:
-  //       document.getElementById('list').style.display = 'none';
-  //       document.getElementById('new').style.display = 'flex';
-  //       document.getElementById('contact').style.display = 'none';
-  //       break;
-  //     case 2:
-  //       document.getElementById('list').style.display = 'none';
-  //       document.getElementById('new').style.display = 'none';
-  //       document.getElementById('contact').style.display = 'flex';
-  //       break;
-  //     default:
-  //       document.getElementById('list').style.display = 'flex';
-  //       document.getElementById('new').style.display = 'none';
-  //       document.getElementById('contact').style.display = 'none';
-  //   }
-  // }
+  // toggleview..
 
   removeBook(tag) {
     if (Object.keys(this.books).length > 0) {
