@@ -40,23 +40,7 @@
                 <div>
                     <h2>All awesome books</h2>
                     <div class="book-list">
-                        <ul class="list-books">
-                            <li>
-                                <span>Title by author</span>
-                                <span><input type="button" value="Remove"></span>
-                            </li>
-                            <li>
-                                <span>Title by author</span>
-                                <span><input type="button" value="Remove"></span>
-                            </li>
-                            <li>
-                                <span>Title by author</span>
-                                <span><input type="button" value="Remove"></span>
-                            </li>
-                            <li>
-                                <span>Title by author</span>
-                                <span><input type="button" value="Remove"></span>
-                            </li>
+                        <ul>
                         </ul>
                     </div>
                 </div>
@@ -66,20 +50,19 @@
                     <h2>Add a new book</h2>
                     <form id="book-form">
                         <div class="form-book">
-                            
                             <input type="text" id="title" required
                                 maxlength="40" name="Title" placeholder="Title of the book" 
                                 size="30" class="in-put"><br>
                         </div>
                         <div class="form-book">
-                            
                             <input type="text" id="author" class="in-put" required
                                 maxlength="40"  name="Author" placeholder="Author of the book" 
                                 size="30" ><br>
                         </div>
                         <div class="btn">
-                            <button type="submit" id="add-btn">Add</button>
+                            <button type="submit" id="add-bk">Add</button>
                         </div>
+                        <span id="error"></span>
                     </form>
                 </div>
             </section>
