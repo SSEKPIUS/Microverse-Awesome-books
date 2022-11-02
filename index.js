@@ -1,36 +1,7 @@
-// change navigation when links clicked
-const toggleView = (index) => {
-  switch (index) {
-    case 0:
-      document.getElementById('list').style.display = 'flex';
-      document.getElementById('new').style.display = 'none';
-      document.getElementById('contact').style.display = 'none';
-      break;
-    case 1:
-      document.getElementById('list').style.display = 'none';
-      document.getElementById('new').style.display = 'flex';
-      document.getElementById('contact').style.display = 'none';
-      break;
-    case 2:
-      document.getElementById('list').style.display = 'none';
-      document.getElementById('new').style.display = 'none';
-      document.getElementById('contact').style.display = 'flex';
-      break;
-    default:
-      document.getElementById('list').style.display = 'flex';
-      document.getElementById('new').style.display = 'none';
-      document.getElementById('contact').style.display = 'none';
-  }
-};
-
-// CLASS
-
 class DomMethods {
   constructor() {
     this.books = [];
   }
-
-  // toggleview..
 
   removeBook(tag) {
     if (Object.keys(this.books).length > 0) {
@@ -73,25 +44,54 @@ class DomMethods {
     }
   }
 }
+// change navigation when links clicked
+const toggleView = (index) => {
+  switch (index) {
+    case 0:
+      document.getElementById('list').style.display = 'flex';
+      document.getElementById('new').style.display = 'none';
+      document.getElementById('contact').style.display = 'none';
+      break;
+    case 1:
+      document.getElementById('list').style.display = 'none';
+      document.getElementById('new').style.display = 'flex';
+      document.getElementById('contact').style.display = 'none';
+      break;
+    case 2:
+      document.getElementById('list').style.display = 'none';
+      document.getElementById('new').style.display = 'none';
+      document.getElementById('contact').style.display = 'flex';
+      break;
+    default:
+      document.getElementById('list').style.display = 'flex';
+      document.getElementById('new').style.display = 'none';
+      document.getElementById('contact').style.display = 'none';
+  }
+};
 
 window.addEventListener('DOMContentLoaded', () => {
   const dmMethods = new DomMethods();
+  const addbk = document.querySelector('#add-bk');
+  const bkList = document.getElementById('list-link');
+  const newLink = document.querySelector('#new-link span');
+  const contactLink = document.querySelector('#contact-link span');
+
   document.getElementById('list-link').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
-    document.querySelector('#new-link span').style.color = 'inherit';
-    document.querySelector('#contact-link span').style.color = 'inherit';
+    newLink.style.color = 'inherit';
+    contactLink.style.color = 'inherit';
     toggleView(0);
   });
-  document.getElementById('new-link').addEventListener('click', (e) => {
+  document.querySelector('#new-link span').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
-    document.querySelector('#list-link span').style.color = 'inherit';
-    document.querySelector('#contact-link span').style.color = 'inherit';
+    bkList.style.color = 'inherit';
+    contactLink.style.color = 'inherit';
     toggleView(1);
   });
-  document.getElementById('contact-link').addEventListener('click', (e) => {
+  document.querySelector('#contact-link span').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
-    document.querySelector('#list-link span').style.setProperty('color', 'inherit');
-    document.querySelector('#new-link span').style.setProperty('color', 'inherit');
+    bkList.style.setProperty('color', 'inherit');
+    newLink.style.setProperty('color', 'inherit');
     toggleView(2);
   });
   document.getElementById('book-form').addEventListener('submit', (e) => {
@@ -115,12 +115,6 @@ window.addEventListener('DOMContentLoaded', () => {
     dmMethods.loadBooks();
   });
   dmMethods.loadBooks();
-
-  // add btn navigate back to list
-  const addbk = document.querySelector('#add-bk');
-  const bkList = document.getElementById('list-link');
-  const newLink = document.querySelector('#new-link span');
-  const contactLink = document.querySelector('#contact-link span');
 
   addbk.addEventListener('click', () => {
     if (document.getElementById('title').value !== '' && document.getElementById('author').value !== '') {
