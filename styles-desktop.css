@@ -92,14 +92,14 @@ body {
   font-style: italic;
 }
 
-/* #list {
+#list {
   display: flex;
 }
 
 #new,
 #contact {
   display: none;
-} */
+}
 
 #list,
 #contact,
