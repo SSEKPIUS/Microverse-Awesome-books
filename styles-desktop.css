@@ -92,14 +92,14 @@ body {
   font-style: italic;
 }
 
-#list {
+/* #list {
   display: flex;
 }
 
 #new,
 #contact {
   display: none;
-}
+} */
 
 #list,
 #contact,
@@ -140,16 +140,20 @@ body {
 }
 
 .book-list ul li span:nth-child(1) {
+  display: none;
+}
+
+.book-list ul li span:nth-child(2) {
   font-size: x-large;
   font-weight: 500;
   cursor: pointer;
 }
 
-.book-list ul li span:nth-child(1):hover {
+.book-list ul li span:nth-child(2):hover {
   color: blue;
 }
 
-.book-list ul li span:nth-child(2) {
+.book-list ul li span:nth-child(3) {
   margin-left: auto;
 }
 
