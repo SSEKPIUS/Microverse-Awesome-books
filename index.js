@@ -78,20 +78,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('list-link').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
-    newLink.style.color = 'inherit';
-    contactLink.style.color = 'inherit';
+    newLink.style.color = 'rgb(51 50 50 / 89%)';
+    contactLink.style.color = 'rgb(51 50 50 / 89%)';
     toggleView(0);
   });
   document.querySelector('#new-link span').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
-    bkList.style.color = 'inherit';
-    contactLink.style.color = 'inherit';
+    bkList.style.color = 'rgb(51 50 50 / 89%)';
+    contactLink.style.color = 'rgb(51 50 50 / 89%)';
     toggleView(1);
   });
   document.querySelector('#contact-link span').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
-    bkList.style.setProperty('color', 'inherit');
-    newLink.style.setProperty('color', 'inherit');
+    bkList.style.color = 'rgb(51 50 50 / 89%)';
+    newLink.style.color = 'rgb(51 50 50 / 89%)';
     toggleView(2);
   });
   document.getElementById('book-form').addEventListener('submit', (e) => {
@@ -119,9 +119,9 @@ window.addEventListener('DOMContentLoaded', () => {
   addbk.addEventListener('click', () => {
     if (document.getElementById('title').value !== '' && document.getElementById('author').value !== '') {
       toggleView(0);
-      bkList.style.color = 'inherit';
-      newLink.style.color = 'inherit';
-      contactLink.style.color = 'inherit';
+      bkList.style.color = 'rgb(51 50 50 / 89%)';
+      newLink.style.color = 'rgb(51 50 50 / 89%)';
+      contactLink.style.color = 'rgb(51 50 50 / 89%)';
     }
   });
 });
