@@ -3,30 +3,6 @@ class DomMethods {
     this.books = [];
   }
 
-  toggleView = (index) => {
-    switch (index) {
-      case 0:
-        document.getElementById('list').style.display = 'flex';
-        document.getElementById('new').style.display = 'none';
-        document.getElementById('contact').style.display = 'none';
-        break;
-      case 1:
-        document.getElementById('list').style.display = 'none';
-        document.getElementById('new').style.display = 'flex';
-        document.getElementById('contact').style.display = 'none';
-        break;
-      case 2:
-        document.getElementById('list').style.display = 'none';
-        document.getElementById('new').style.display = 'none';
-        document.getElementById('contact').style.display = 'flex';
-        break;
-      default:
-        document.getElementById('list').style.display = 'flex';
-        document.getElementById('new').style.display = 'none';
-        document.getElementById('contact').style.display = 'none';
-    }
-  }
-
   removeBook(tag) {
     if (Object.keys(this.books).length > 0) {
       this.books = this.books.filter(function get(el) {
@@ -67,6 +43,31 @@ class DomMethods {
       this.books = data;
     }
   }
+
+  // eslint-disable-next-line class-methods-use-this
+  toggleView(index) {
+    switch (index) {
+      case 0:
+        document.getElementById('list').style.display = 'flex';
+        document.getElementById('new').style.display = 'none';
+        document.getElementById('contact').style.display = 'none';
+        break;
+      case 1:
+        document.getElementById('list').style.display = 'none';
+        document.getElementById('new').style.display = 'flex';
+        document.getElementById('contact').style.display = 'none';
+        break;
+      case 2:
+        document.getElementById('list').style.display = 'none';
+        document.getElementById('new').style.display = 'none';
+        document.getElementById('contact').style.display = 'flex';
+        break;
+      default:
+        document.getElementById('list').style.display = 'flex';
+        document.getElementById('new').style.display = 'none';
+        document.getElementById('contact').style.display = 'none';
+    }
+  }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -75,19 +76,19 @@ window.addEventListener('DOMContentLoaded', () => {
     e.target.style.color = 'blue';
     document.querySelector('#new-link span').style.color = 'inherit';
     document.querySelector('#contact-link span').style.color = 'inherit';
-    this.toggleView(0);
+    dmMethods.toggleView(0);
   });
   document.getElementById('new-link').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
     document.querySelector('#list-link span').style.color = 'inherit';
     document.querySelector('#contact-link span').style.color = 'inherit';
-    this.toggleView(1);
+    dmMethods.toggleView(1);
   });
   document.getElementById('contact-link').addEventListener('click', (e) => {
     e.target.style.color = 'blue';
     document.querySelector('#list-link span').style.setProperty('color', 'inherit');
     document.querySelector('#new-link span').style.setProperty('color', 'inherit');
-    this.toggleView(2);
+    dmMethods.toggleView(2);
   });
   document.getElementById('book-form').addEventListener('submit', (e) => {
     e.preventDefault();
@@ -110,4 +111,18 @@ window.addEventListener('DOMContentLoaded', () => {
     dmMethods.loadBooks();
   });
   dmMethods.loadBooks();
+
+  const addbk = document.querySelector('#add-bk');
+  const bkList = document.getElementById('list-link');
+  const newLink = document.querySelector('#new-link span');
+  const contactLink = document.querySelector('#contact-link span');
+
+  addbk.addEventListener('click', () => {
+    if (document.getElementById('title').value !== '' && document.getElementById('author').value !== '') {
+      dmMethods.toggleView(0);
+      bkList.style.color = 'inherit';
+      newLink.style.color = 'inherit';
+      contactLink.style.color = 'inherit';
+    }
+  });
 });

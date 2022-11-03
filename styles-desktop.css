@@ -92,14 +92,14 @@ body {
   font-style: italic;
 }
 
-/* #list {
+#list {
   display: flex;
 }
 
 #new,
 #contact {
   display: none;
-} */
+}
 
 #list,
 #contact,
@@ -234,7 +234,6 @@ body {
   font-size: 20px;
   padding: 10px;
   border-radius: 10px;
-  margin-right: 20px;
 }
 
 /* contact us section */
@@ -260,7 +259,8 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin: 2% 10%;
+  margin-left: 15%;
+  margin-top: 2%;
 }
 
 #contact ul a {
